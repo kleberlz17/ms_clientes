@@ -47,7 +47,7 @@ public class ClienteController {
 	}
 	
 	@GetMapping("/cpf/{cpf}")
-	public ResponseEntity<Cliente> buscarPorCpf(@PathVariable String cpf) {
+	public ResponseEntity<Cliente> dadosCliente(@PathVariable String cpf) {
 		Optional<Cliente> cliente = clienteService.buscarPorCpf(cpf);
 		
 		if (cliente.isPresent()) {
