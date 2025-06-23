@@ -1,16 +1,14 @@
 spring:
   application:
     name: msclientes
-  profiles:
-    active: local # Pra utilizar o application-local.
 
 server:
   port: 0
-
+  
 eureka:
   client:
     service-url:
-      defaultZone: http://kleberlzms-eureka-user:erlseeakrer-sbzluk-ume@${EUREKA_SERVER}:8762/eureka
+      defaultZone: http://kleberlzms-eureka-user:erlseeakrer-sbzluk-ume@kleberlzms-eureka:8762/eureka
   instance:
     instance-id: ${spring.application.name}:${random.value}
 
@@ -23,6 +21,3 @@ management:
 logging:
   file:
     name: ./logs/log-file.log # Acessar o LOG no browser através do Actuator
-
-
-
